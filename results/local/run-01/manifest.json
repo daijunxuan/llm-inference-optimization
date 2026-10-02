@@ -1,0 +1,22 @@
+[
+  {
+    "profile": "hf-none-b1",
+    "exit_code": 0,
+    "result": "hf-none-b1.json"
+  },
+  {
+    "profile": "hf-none-b4",
+    "exit_code": 0,
+    "result": "hf-none-b4.json"
+  },
+  {
+    "profile": "hf-int8-b1",
+    "exit_code": 0,
+    "result": "hf-int8-b1.json"
+  },
+  {
+    "profile": "hf-int8-b4",
+    "exit_code": 0,
+    "result": "hf-int8-b4.json"
+  }
+]

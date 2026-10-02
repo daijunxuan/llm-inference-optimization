@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "llm-inference-lab"
+version = "0.1.0"
+description = "Reproducible Qwen inference benchmarks: Transformers, vLLM, quantization and batching"
+requires-python = ">=3.10"
+dependencies = ["psutil==7.0.0", "huggingface-hub>=0.30,<1"]
+
+[project.optional-dependencies]
+hf = ["torch==2.6.0", "transformers==4.51.3", "accelerate==1.6.0"]
+vllm = ["vllm==0.10.2", "transformers==4.55.2", "numpy<2.3"]
+quant = ["bitsandbytes==0.45.5"]
+dev = ["pytest==8.3.5", "ruff==0.11.5"]
+plot = ["matplotlib>=3.9,<4"]
+
+[project.scripts]
+llmbench = "llmbench.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100

@@ -1,0 +1,88 @@
+{
+  "common": {
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+    "device": "cuda",
+    "dtype": "float16",
+    "requests": 64,
+    "input_tokens": 128,
+    "output_tokens": 128,
+    "repeats": 5,
+    "warmup": 3,
+    "threads": 4
+  },
+  "profiles": [
+    {
+      "name": "hf-none-b1",
+      "options": {
+        "backend": "hf",
+        "quantization": "none",
+        "batch_size": 1
+      }
+    },
+    {
+      "name": "hf-none-b4",
+      "options": {
+        "backend": "hf",
+        "quantization": "none",
+        "batch_size": 4
+      }
+    },
+    {
+      "name": "hf-none-b16",
+      "options": {
+        "backend": "hf",
+        "quantization": "none",
+        "batch_size": 16
+      }
+    },
+    {
+      "name": "vllm-none-b1",
+      "options": {
+        "backend": "vllm",
+        "quantization": "none",
+        "batch_size": 1
+      }
+    },
+    {
+      "name": "vllm-none-b4",
+      "options": {
+        "backend": "vllm",
+        "quantization": "none",
+        "batch_size": 4
+      }
+    },
+    {
+      "name": "vllm-none-b16",
+      "options": {
+        "backend": "vllm",
+        "quantization": "none",
+        "batch_size": 16
+      }
+    },
+    {
+      "name": "hf-nf4-b1",
+      "options": {
+        "backend": "hf",
+        "quantization": "nf4",
+        "batch_size": 1
+      }
+    },
+    {
+      "name": "hf-nf4-b4",
+      "options": {
+        "backend": "hf",
+        "quantization": "nf4",
+        "batch_size": 4
+      }
+    },
+    {
+      "name": "hf-nf4-b16",
+      "options": {
+        "backend": "hf",
+        "quantization": "nf4",
+        "batch_size": 16
+      }
+    }
+  ]
+}

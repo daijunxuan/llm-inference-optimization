@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "status": "measured",
+  "created_at": "2026-10-02T01:46:29.695924+00:00",
+  "config": {
+    "command": "run",
+    "backend": "hf",
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+    "device": "cpu",
+    "dtype": "float32",
+    "quantization": "int8",
+    "batch_size": 4,
+    "requests": 8,
+    "input_tokens": 64,
+    "output_tokens": 32,
+    "repeats": 3,
+    "warmup": 1,
+    "threads": 4,
+    "seed": 42,
+    "nvml_index": 0,
+    "gpu_memory_utilization": 0.8
+  },
+  "environment": {
+    "os": "Darwin",
+    "os_release": "22.4.0",
+    "architecture": "arm64",
+    "python": "3.13.2",
+    "packages": {
+      "torch": "2.6.0",
+      "transformers": "4.51.3",
+      "psutil": "7.0.0"
+    },
+    "cpu_threads": 4,
+    "cuda_version": null,
+    "device_name": "arm"
+  },
+  "workload_sha256": "7d284f20d02aa8f2133be10511b14645b211da34db6cd0666a154fe1a2ce319f",
+  "load_seconds": 2.6386489579454064,
+  "metrics": {
+    "batch_latency_p50_ms": 2241.6826460394077,
+    "batch_latency_p95_ms": 2295.374718756648,
+    "output_tokens_per_second": 56.96718289644768,
+    "requests_per_second": 1.78022446551399,
+    "total_seconds": 13.481446000165306,
+    "total_output_tokens": 768,
+    "total_requests": 24,
+    "measured_batches": 6
+  },
+  "memory": {
+    "peak_process_tree_rss_mib": 667.1875,
+    "peak_device_used_mib": null,
+    "sample_interval_seconds": 0.02,
+    "gpu_sampling_error": null
+  },
+  "batches": [
+    {
+      "repeat": 0,
+      "batch": 0,
+      "seconds": 2.3087617499986663,
+      "requests": 4,
+      "output_tokens": 128
+    },
+    {
+      "repeat": 0,
+      "batch": 1,
+      "seconds": 2.248138374998234,
+      "requests": 4,
+      "output_tokens": 128
+    },
+    {
+      "repeat": 1,
+      "batch": 0,
+      "seconds": 2.207043541013263,
+      "requests": 4,
+      "output_tokens": 128
+    },
+    {
+      "repeat": 1,
+      "batch": 1,
+      "seconds": 2.235226917080581,
+      "requests": 4,
+      "output_tokens": 128
+    },
+    {
+      "repeat": 2,
+      "batch": 0,
+      "seconds": 2.227061792043969,
+      "requests": 4,
+      "output_tokens": 128
+    },
+    {
+      "repeat": 2,
+      "batch": 1,
+      "seconds": 2.255213625030592,
+      "requests": 4,
+      "output_tokens": 128
+    }
+  ],
+  "sample": {
+    "output_token_ids": [
+      63762,
+      315,
+      264,
+      4128,
+      1614,
+      13,
+      21806,
+      25,
+      5430,
+      220,
+      15,
+      25,
+      81917,
+      3170,
+      84256,
+      646,
+      7269,
+      279,
+      63762,
+      315,
+      264,
+      4128,
+      1614,
+      13,
+      21806,
+      25,
+      5430,
+      220,
+      15,
+      25,
+      81917,
+      3170
+    ],
+    "text": " throughput of a language model. Answer: Task 0: Explain why batching can improve the throughput of a language model. Answer: Task 0: Explain why"
+  }
+}

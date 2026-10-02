@@ -1,0 +1,9 @@
+FROM python:3.11-slim
+WORKDIR /workspace
+RUN python -m pip install --no-cache-dir torch==2.6.0 --index-url https://download.pytorch.org/whl/cpu
+COPY pyproject.toml README.md ./
+COPY src ./src
+COPY configs ./configs
+RUN python -m pip install --no-cache-dir '.[hf]'
+ENTRYPOINT ["python", "-m", "llmbench"]
+CMD ["--help"]

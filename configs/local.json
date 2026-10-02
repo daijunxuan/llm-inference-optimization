@@ -1,0 +1,48 @@
+{
+  "common": {
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+    "device": "cpu",
+    "dtype": "float32",
+    "requests": 8,
+    "input_tokens": 64,
+    "output_tokens": 32,
+    "repeats": 3,
+    "warmup": 1,
+    "threads": 4
+  },
+  "profiles": [
+    {
+      "name": "hf-none-b1",
+      "options": {
+        "backend": "hf",
+        "quantization": "none",
+        "batch_size": 1
+      }
+    },
+    {
+      "name": "hf-none-b4",
+      "options": {
+        "backend": "hf",
+        "quantization": "none",
+        "batch_size": 4
+      }
+    },
+    {
+      "name": "hf-int8-b1",
+      "options": {
+        "backend": "hf",
+        "quantization": "int8",
+        "batch_size": 1
+      }
+    },
+    {
+      "name": "hf-int8-b4",
+      "options": {
+        "backend": "hf",
+        "quantization": "int8",
+        "batch_size": 4
+      }
+    }
+  ]
+}
