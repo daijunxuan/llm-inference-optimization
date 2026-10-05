@@ -1,5 +1,7 @@
 # LLM Inference Optimization Lab
 
+[![Tests](https://github.com/daijunxuan/llm-inference-optimization/actions/workflows/ci.yml/badge.svg)](https://github.com/daijunxuan/llm-inference-optimization/actions/workflows/ci.yml) · [中文说明](docs/README.zh-CN.md)
+
 Reproducible experiments on **Qwen · Hugging Face Transformers · vLLM · quantization · batching · Docker**.
 
 This project asks a practical systems question: **how do batch size, runtime, and weight precision change inference throughput, latency, and memory?** It includes measured local CPU results, raw observations, an automated comparison report, and a separate NVIDIA GPU experiment matrix.
